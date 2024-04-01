@@ -1,1 +1,35 @@
+.parent {
+    position: relative;
+    width: 200px; /* Set width of parent div */
+    height: 100px; /* Set height of parent div */
+    background-color: #ccc; /* Background color of parent div */
+  }
+  
+  .child {
+    font-size: 20px; /* Font size of text */
+    padding: 10px; /* Padding around text */
+  }
+  
+  .small-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f00; /* Background color of small div */
+    color: #fff; /* Text color of small div */
+    padding: 5px; /* Padding around text */
+  }
+/* Desktop View */
+@media screen and (min-width: 992px) {
+    /* CSS rules for desktop layout */
+}
 
+/* Tablet View */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    /* CSS rules for tablet layout */
+}
+
+/* Mobile View */
+@media screen and (max-width: 767px) {
+    /* CSS rules for mobile layout */
+}
+  
