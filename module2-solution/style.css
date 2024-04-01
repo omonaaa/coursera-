@@ -1,4 +1,6 @@
-.container {
+h1{
+    text-align:center;
+}.container {
     display: flex;
     flex-direction: column;
     width: 100%;
