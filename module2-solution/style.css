@@ -1,76 +1,67 @@
-h1{
-    text-align:center;
-}.container {
+/* Resetting default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family:cursive;
+}
+
+/* Center the heading */
+h1 {
+    text-align: center;
+}
+
+/* Define styles for the container */
+.container {
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    justify-content: space-between; /* Spacing between sections */
+    padding: 20px; /* Add padding to container */
+    max-width: 900px; /* Limit maximum width for larger screens */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Define styles for each section */
 .parent {
-    position: relative;
-    margin-bottom: 20px; /* Added margin for better separation */
-    background-color: #ccc;
+    width: calc(33.33% - 20px); /* Set width for each item with some spacing */
+    margin-bottom: 20px; /* Spacing between sections */
+    position: relative; /* Positioning for the section title */
+    background-color: #ccc; /* Background color for sections */
+    border: 1px solid black; /* 1px black border */
+    padding: 35px; /* Add padding to sections */
+    box-sizing: border-box; /* Include border and padding in section width calculation */
 }
 
-.child {
-    font-size: 20px;
-    padding: 10px;
-}
-
+/* Define styles for section titles */
 .small-div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #f00;
-    color: #fff;
-    padding: 5px;
+    position: absolute; /* Position title absolutely */
+    top: 10px; /* 10px from top */
+    right: 10px; /* 10px from right */
+    background-color: #f00; /* Red background color for titles */
+    color: #fff; /* White text color */
+    padding: 5px 10px; /* Padding for title */
 }
 
 /* Desktop View */
 @media screen and (min-width: 992px) {
-    .container {
-        flex-direction: row;
-        flex-wrap: wrap; /* Allow items to wrap onto new lines */
-        max-width: 900px; /* Limit maximum width for larger screens */
-        margin: 0 auto; /* Center the container horizontally */
-    }
-    
-    .parent {
-        width: calc(33.33% - 20px); /* Set width for each item with some spacing */
-        margin-right: 20px;
-    }
-    
-    .parent:nth-child(3n) {
-        margin-right: 0; /* Remove margin from the last item in each row */
-    }
+    /* No additional styles needed for desktop view */
 }
 
 /* Tablet View */
 @media screen and (min-width: 768px) and (max-width: 991px) {
     .parent {
         width: calc(50% - 20px); /* Set width for each item with some spacing */
-        margin-right: 20px;
-        margin-bottom: 20px; /* Added margin for better separation */
     }
 
-    /* Set width for the first two sections */
-    .parent:nth-child(-n+2) {
-        width: calc(50% - 20px);
-        margin-right: 20px;
-    }
-
-    /* Set width for the third section to 100% */
     .parent:nth-child(3) {
-        width: 100%;
+        width: 100%; /* Third section takes up full width */
         margin-right: 0; /* Remove right margin for the third section */
     }
 }
 
-
 /* Mobile View */
 @media screen and (max-width: 767px) {
     .parent {
-        width: 100%; /* Make each item take full width */
+        width: 100%; /* Each section takes up full width */
         margin-right: 0; /* Remove any right margin */
     }
 }
